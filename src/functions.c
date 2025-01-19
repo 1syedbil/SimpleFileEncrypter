@@ -32,11 +32,31 @@ bool validateCommandArgs(int argc, char* argv[])
 
 void encryptFile(char fileName[MAX_STRING_LEN])
 {
-	printf("Encrypting.\n");
+	if(!fileExists(fileName))
+	{
+		return;
+	}
 }
 
 
 void decryptFile(char fileName[MAX_STRING_LEN])
 {
-	printf("Decrypting.\n");
+	if(!fileExists(fileName))
+        {
+                return;
+        }
+}
+
+
+bool fileExists(char fileName[MAX_STRING_LEN])
+{
+	FILE* fp = fopen(fileName, "r");
+
+	if (fp == NULL)
+	{
+		perror("Could not open file");
+		return false;
+	}
+
+	return true;
 }

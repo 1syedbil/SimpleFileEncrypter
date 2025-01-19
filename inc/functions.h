@@ -13,5 +13,5 @@
 bool validateCommandArgs(int argc, char* argv[]);
 void encryptFile(char fileName[MAX_STRING_LEN]);
 void decryptFile(char fileName[MAX_STRING_LEN]);
-
+bool fileExists(char fileName[MAX_STRING_LEN]);
 
