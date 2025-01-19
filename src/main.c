@@ -8,8 +8,14 @@ int main(int argc, char* argv[])
 	}
 	else
 	{
-		printf("Hello World.\n");
-		return 0;
+		if (argc == 2 || strcmp(argv[2], "-encrypt") == 0)
+		{
+			encryptFile(argv[1]);
+		}
+		else
+		{
+			decryptFile(argv[1]);
+		}
 	}
 
 	return 0;

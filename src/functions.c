@@ -28,3 +28,15 @@ bool validateCommandArgs(int argc, char* argv[])
 
 	return true;
 }
+
+
+void encryptFile(char fileName[MAX_STRING_LEN])
+{
+	printf("Encrypting.\n");
+}
+
+
+void decryptFile(char fileName[MAX_STRING_LEN])
+{
+	printf("Decrypting.\n");
+}
